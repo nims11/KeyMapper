@@ -1,8 +1,13 @@
 #!/bin/bash
 IFS=$'\n'
 DIR=${0%`basename "$0"`}
+if [[ ! -f "$DIR/enabled.state" ]]; then
+	echo "Already Disabled"
+	exit 0
+fi
+echo "Disabling..."
 for line in $(awk '/^ *[^#]/{print $3,$2,$1}' "$DIR/keys.conf"); do 
 	xmodmap -e "keysym $line";
 done
-
-
+rm "$DIR/enabled.state"
+aplay "$DIR/disabled.wav"

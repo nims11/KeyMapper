@@ -1,5 +1,8 @@
 #!/bin/bash
 DIR=${0%`basename "$0"`}
+if [[ -f "$DIR/enabled.state" ]]; then
+rm "$DIR/enabled.state"
+fi
 xbindkeys -n -f "$DIR/xbindrc" &
 echo $! > PID
 echo "KeyMapper Started, initially off..."
