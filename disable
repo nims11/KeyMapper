@@ -1,0 +1,8 @@
+#!/bin/bash
+IFS=$'\n'
+DIR=${0%`basename "$0"`}
+for line in $(awk '/^ *[^#]/{print $3,$2,$1}' "$DIR/keys.conf"); do 
+	xmodmap -e "keysym $line";
+done
+
+

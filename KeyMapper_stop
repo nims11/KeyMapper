@@ -1,0 +1,4 @@
+#!/bin/bash
+DIR=${0%`basename "$0"`}
+kill `cat "$DIR/PID"` || exit 1
+echo "Stopped..."

@@ -1,0 +1,5 @@
+#!/bin/bash
+DIR=${0%`basename "$0"`}
+xbindkeys -n -f "$DIR/xbindrc" &
+echo $! > PID
+echo "KeyMapper Started, initially off..."

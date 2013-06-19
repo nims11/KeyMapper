@@ -1,0 +1,40 @@
+Custom KeyMapper for Linux
+------
+
+Bash scripts made specially for DoTA Players and other games.
+
+Skill keys in Dota can be customized through CustomKeys (Generate one from http://drjones.dk/customkeys/generator.php).
+But under Linux, there no such tool for custom item keys, which is a pain as using items with mouse is really inconvenient.
+Warkeys or any other tool doesn't run well with wine.
+
+KeyMapper solves this problem. It uses xbindkeys and xmodmap to enable you to use custom keys for items as well.
+
+Dependencies
+------
+
+* bash
+* xmodmap
+* xbindkeys
+
+Usage
+------
+
+Make sure all the scripts in the folder are executable.
+	chmod +x ./*
+
+Start the KeyMapper with
+	./KeyMapper
+
+Stop with
+	./KeyMapper_stop
+
+When it starts, the mapping is not applied initially. The default shortcut for enabling them is the F7 key and F8 for disabling.
+When enabled, the keys to which something is remapped to will act as that key and not its original function. You can quickly default the mapping by F8.
+Shortcuts can be changed by editing the ./xbindrc file.
+
+For configuring mapping, see ./keys.conf file.
+
+Contribute
+------
+
+Feel free to post issues, request features or send pull requests.

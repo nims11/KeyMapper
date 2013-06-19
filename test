@@ -1,0 +1,3 @@
+#!/bin/bash
+IFS='\n'
+for x in $(xmodmap -pke); do echo 1; done
