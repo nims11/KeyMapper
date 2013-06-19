@@ -28,8 +28,8 @@ Start the KeyMapper with
 Stop with
 	./KeyMapper_stop
 
-When it starts, the mapping is not applied initially. The default shortcut for enabling them is the F7 key and F8 for disabling.
-When enabled, the keys to which something is remapped to will act as that key and not its original function. You can quickly default the mapping by F8.
+When it starts, the mapping is not applied initially. The default shortcut for Toggling Custom Mapping is F7.
+When enabled, the keys to which something is remapped to will act as that key and not its original function. You can quickly default the mapping by toggling again with F7.
 Shortcuts can be changed by editing the ./xbindrc file.
 
 For configuring mapping, see ./keys.conf file.
