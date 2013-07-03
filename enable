@@ -6,8 +6,10 @@ if [[ -f "$DIR/enabled.state" ]]; then
 	exit 0
 fi
 echo "Enabling..."
+
 for line in $(awk '/^ *[^#]/' "$DIR/keys.conf"); do 
 	xmodmap -e "keysym $line";
 done
+
 touch "$DIR/enabled.state"
-aplay "$DIR/enabled.wav"
+aplay "$DIR/enabled.wav" 
